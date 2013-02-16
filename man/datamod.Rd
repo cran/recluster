@@ -14,8 +14,8 @@ data(datamod)
   A data frame with 9 observations (sites) on 31 binary variables (species).
 }
 \source{
-Dapporto L., Ramazzotti M., Fattorini S., Vila R., Dennis R. 
-"recluster: an unbiased clustering procedure to detect biogeographic patterns by beta-diversity turnover"
+Dapporto L., Ramazzotti M., Fattorini S., Vila R., Talavera G., Dennis R. 
+"recluster: an unbiased clustering procedure for beta-diversity turnover"
 XXXX (2013), XXX:XXX.
 \url{
 www.unifi.it/scibio/bioinfo/recluster.html

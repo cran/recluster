@@ -1,10 +1,10 @@
-recluster.boot <- function (tree,mat,tr=100,p=0.5,dist="simpson", method="average",boot=1000,level=1) {
+recluster.boot <- function (tree,mat,phylo=NULL,tr=100,p=0.5,dist="simpson", method="average",boot=1000,level=1) {
 
 	if(length(tree$tip.label)!= nrow(mat))
     stop("ERROR: different site numbers between tree and matrix")
 
 
-	treesb<-(as.phylo(hclust(recluster.dist(mat,dist),method=method)))
+	treesb<-(as.phylo(hclust(recluster.dist(mat,phylo,dist),method=method)))
 	for (i in 1 : boot){
 		for (testNA in 1:10000){
 			xs<-mat[,sample(ncol(mat),ncol(mat)*level,replace=T)]
@@ -12,7 +12,7 @@ recluster.boot <- function (tree,mat,tr=100,p=0.5,dist="simpson", method="averag
 				break
 			}
 		}
-		treesb[[i]]<-recluster.cons(xs,tr,p,dist)
+		treesb[[i]]<-recluster.cons(xs,phylo,tr,p,dist)
 	}
 	btr2 <- .compressTipLabel(treesb)
 	tr2 <- recluster.check(tree, attr(btr2, "TipLabel"))

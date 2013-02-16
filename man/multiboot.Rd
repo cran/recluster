@@ -1,17 +1,17 @@
-\name{dataisl}
-\alias{dataisl}
+\name{multiboot}
+\alias{multiboot}
 \docType{data}
 \title{
-West Mediterranean island butterflies provided with the package recluster 
+A multiboot result from dataisl dataset.
 }
 \description{
-This dataset represent presence of butterfly species in 30 West-Mediterranean islands
+This dataset represent an output for a multiscale bootstrap composed of 30 scales (x1-x30). 
 }
 \usage{
 data(dataisl)
 }
 \details{
-  A data frame with 30 observations (islands) on 123 binary variables (species).
+  A data frame with 29 nodes (rows) and 30 different scales of bootstrap(columns). NAs values represent collapsed nodes
 }
 \source{
 Dapporto L., Ramazzotti M., Fattorini S., Vila R., Talavera G., Dennis R. 
@@ -22,6 +22,6 @@ www.unifi.it/scibio/bioinfo/recluster.html
 }
 }
 \author{
-Leonardo Dapporto and Roger Vila
+Leonardo Dapporto
 }
 \keyword{datasets}

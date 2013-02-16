@@ -22,14 +22,14 @@ A tip name
 An oject of the class phylo
 }
 \references{
-Dapporto L., Ramazzotti M., Fattorini S., Vila R., Dennis R. 
-"recluster: an unbiased clustering procedure to detect biogeographic patterns by beta-diversity turnover"
+Dapporto L., Ramazzotti M., Fattorini S., Vila R., Talavera G., Dennis R. 
+"recluster: an unbiased clustering procedure for beta-diversity turnover"
 XXXX (2013), XXX:XXX.
 \url{
 www.unifi.it/scibio/bioinfo/recluster.html
 }
 }
 \author{
-Leonadro Dapporto
+Leonadro Dapporto and Matteo Ramazzotti
 }
 \keyword{ internal }

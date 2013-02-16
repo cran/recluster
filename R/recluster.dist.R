@@ -1,11 +1,12 @@
-recluster.dist <-function(mat, dist="simpson") {
+recluster.dist <-function(mat, phylo=NULL, dist=c("simpson","sorensen","nestedness","beta3","richness","jaccard","phylosor","phylosort","phylosorpd","unifrac","unifract","unifracpd")) {
+                                                   
 	mat<-as.matrix(mat)
 	if(is.numeric(mat) == "FALSE") 	stop("ERROR: not numeric matrix")
 	if(prod(rowSums(mat)) == 0) stop("ERROR: empty site(s) in matrix")
-	if(prod(colSums(mat)) == 0) stop("ERROR: species with 0 occurrence in matrix")
+	#if(prod(colSums(mat)) == 0) stop("ERROR: species with 0 occurrence in matrix")
 
-	options<-c("simpson","beta3","jaccard","sorensen","richness","nestedness")
-	if (is.na(pmatch(dist,options))) {
+	options<-c("simpson","sorensen","nestedness","beta3","richness","jaccard","phylosor","phylosort","phylosorpd","unifrac","unifract","unifracpd")
+	if (is.na(pmatch(dist[1],options))) {
 			res <- designdist(mat, method = dist,terms = c("binary"))
 			attr(res,"dist") <- dist
 			return(res)
@@ -43,6 +44,38 @@ recluster.dist <-function(mat, dist="simpson") {
 			res <- designdist(mat, method = "(abs(A-B)/(A+B))*(J/pmin(A,B))",terms = c("binary"))
 			attr(res,"dist") <- "nestedness"
 			res
+		},
+		phylosor = {
+			res <- phylosor (mat, phylo)
+			attr(res,"dist") <- "phylosor"
+			res
+		},
+		phylosort = {
+			res <- phylosort (mat, phylo)
+			attr(res,"dist") <- "phylosort"
+			res
+		},
+		phylosorpd = {
+			res <- phylosorpd (mat, phylo)
+			attr(res,"dist") <- "phylosorpd"
+			res
+		},
+		unifrac = {
+			res <- unifrac (mat, phylo)
+			attr(res,"dist") <- "unifrac"
+			res
+		},
+		unifract = {
+			res <- unifract (mat, phylo)
+			attr(res,"dist") <- "unifract"
+			res
+		},
+		unifracpd = {
+			res <- unifracpd (mat, phylo)
+			attr(res,"dist") <- "unifracpd"
+			res
 		}
 	)
 }
+
+

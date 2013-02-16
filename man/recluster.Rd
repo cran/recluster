@@ -18,21 +18,18 @@ License: \tab GPL (>= 2.0)\cr
 }
 }
 \author{
-Leonardo Dapporto, Matteo Ramazzotti, Simone Fattorini, Roger Vila, Roger H.L. Dennis
+Leonardo Dapporto, Matteo Ramazzotti, Simone Fattorini, Roger Vila, Gerard Telavera, Roger H.L. Dennis
 
 Maintainer: Leonardo Dapporto <leondap@gmail.com>
 
 }
 \references{
-Dapporto L., Ramazzotti M., Fattorini S., Vila R., Dennis R. 
-"recluster: an unbiased clustering procedure to detect biogeographic patterns by beta-diversity turnover"
+Dapporto L., Ramazzotti M., Fattorini S., Vila R., Talavera G., Dennis R. 
+"recluster: an unbiased clustering procedure for beta-diversity turnover"
 XXXX (2013), XXX:XXX.
-
 \url{
 www.unifi.it/scibio/bioinfo/recluster.html
 }
-
-
 }
 \keyword{ package }
 \examples{

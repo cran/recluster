@@ -7,13 +7,17 @@ Multiscale bootstrap based on consensus trees
 Given an initial tree and a data matrix, this function computes bootstrap for nodes as done by recluster.boot. Several levels of bootstrap can be computed by varying the number of levels and the step in increasing proportions of species sampled from the original matrix.
 }
 \usage{
-recluster.multi(tree, mat, tr = 100, p = 0.5, dist = "simpson", method = "average", boot = 1000, levels = 2, step = 1)
+recluster.multi(tree, mat, phylo = NULL, tr = 100, p = 0.5, dist = "simpson", method = "average", boot = 1000, levels = 2, step = 1)
 }
 \arguments{
   \item{tree}{
-A phylo tree presumably constructed with recluster.cons function.}
+A reference phylo tree for sites presumably constructed with recluster.cons function.
+}
   \item{mat}{
 The matrix used to construct the tree.
+}
+  \item{phylo}{
+An ultrametric and rooted phylo tree for species having the same labels as in mat columns. Only required for phylogenitic beta-diversity indexes.
 }
   \item{tr}{
 The number of trees to be included in the consensus.
@@ -22,7 +26,7 @@ The number of trees to be included in the consensus.
 A numeric value between 0.5 and 1 giving the proportion for a clade to be represented in the consensus tree.
 }
   \item{dist}{
-One among the six beta-diversity indexes \code{"simpson" "sorensen" "nestedness" "beta3" "richness" "jaccard"}. Any custom binary dissimilarity can also be specified according to the syntax of designdist function of the vegan package.
+One among the twelve beta-diversity indexes \code{"simpson" "sorensen" "nestedness" "beta3" "richness" "jaccard" "phylosor" "phylosort" "phylosorpd" "unifrac" "unifract" "unifractpd"}. Any custom binary dissimilarity can also be specified according to the syntax of designdist function of the vegan package.
 }
   \item{method}{
 Any clustering method allowed by hclust.
@@ -44,18 +48,16 @@ Computation can be time consuming much more than for recluster.boot. It is sugge
 An object of the matrix format indicating percentage of bootstrap trees replicating each node for each level.
 }
 \references{
-Dapporto L., Ramazzotti M., Fattorini S., Vila R., Dennis R. 
-"recluster: an unbiased clustering procedure to detect biogeographic patterns by beta-diversity turnover"
+Dapporto L., Ramazzotti M., Fattorini S., Vila R., Talavera G., Dennis R. 
+"recluster: an unbiased clustering procedure for beta-diversity turnover"
 XXXX (2013), XXX:XXX.
 
 \url{
 www.unifi.it/scibio/bioinfo/recluster.html
 }
-
-
 }
 \author{
-Leonardo Dapporto
+Leonardo Dapporto and Matteo Ramazzotti
 }
 \examples{
 data(datamod)

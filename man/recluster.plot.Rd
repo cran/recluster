@@ -7,7 +7,7 @@ A plotter for recluster bootstrapped objects
 This function produce plots for recluster trees and assign single or pairs of support values for single or multilevel analyses.
 }
 \usage{
-recluster.plot(tree, data, low = 1, high = 0, nodelab.cex=0.8, direction="downwards",...)
+recluster.plot(tree, data, low = 1, high = 0, id=NULL, nodelab.cex=0.8, direction="downwards",...)
 }
 
 \arguments{
@@ -16,6 +16,9 @@ A phylo tree presumably constructed with recluster.cons function.
 }
   \item{data}{
 A recluster.mult result.
+}
+  \item{id}{
+A vector to colour node support with different colours as presumably identified by recluster.identify.nodes.
 }
   \item{low}{
 The lower level which values should be included in the tree.
@@ -42,18 +45,15 @@ This function allow to select up to two labels for nodes based on bootstrap valu
 Thisis done with the \code{nodelabels} ape function, by specifying the \code{adj} parameters in the appropriate way.
 }
 \references{
-Dapporto L., Ramazzotti M., Fattorini S., Vila R., Dennis R. 
-"recluster: an unbiased clustering procedure to detect biogeographic patterns by beta-diversity turnover"
+Dapporto L., Ramazzotti M., Fattorini S., Vila R., Talavera G., Dennis R. 
+"recluster: an unbiased clustering procedure for beta-diversity turnover"
 XXXX (2013), XXX:XXX.
-
 \url{
 www.unifi.it/scibio/bioinfo/recluster.html
 }
-
-
 }
 \author{
-Leonardo Dapporto
+Leonardo Dapporto and Matteo Ramazzotti
 }
 \examples{
 data(datamod)

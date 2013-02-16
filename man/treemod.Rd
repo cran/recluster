@@ -1,17 +1,17 @@
-\name{dataisl}
-\alias{dataisl}
+\name{treemod}
+\alias{treemod}
 \docType{data}
 \title{
-West Mediterranean island butterflies provided with the package recluster 
+Hypothetical phylogenetic tree for the virtual island faunas provided with the package recluster 
 }
 \description{
-This dataset represent presence of butterfly species in 30 West-Mediterranean islands
+This phylogenetic tree has been created from the datamod dataset representing a series of virtual faunas in different sites
 }
 \usage{
-data(dataisl)
+data(treemod)
 }
 \details{
-  A data frame with 30 observations (islands) on 123 binary variables (species).
+  A phylogenetic tree of 31 species taken from 9 sites.
 }
 \source{
 Dapporto L., Ramazzotti M., Fattorini S., Vila R., Talavera G., Dennis R. 
@@ -22,6 +22,6 @@ www.unifi.it/scibio/bioinfo/recluster.html
 }
 }
 \author{
-Leonardo Dapporto and Roger Vila
+Gerard Talavera
 }
 \keyword{datasets}
