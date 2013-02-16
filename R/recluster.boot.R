@@ -1,9 +1,7 @@
 recluster.boot <- function (tree,mat,phylo=NULL,tr=100,p=0.5,dist="simpson", method="average",boot=1000,level=1) {
-
+	mat<-as.matrix(mat)
 	if(length(tree$tip.label)!= nrow(mat))
     stop("ERROR: different site numbers between tree and matrix")
-
-
 	treesb<-(as.phylo(hclust(recluster.dist(mat,phylo,dist),method=method)))
 	for (i in 1 : boot){
 		for (testNA in 1:10000){

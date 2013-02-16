@@ -60,5 +60,11 @@ data(datamod)
 tree<-recluster.cons(datamod,tr=10)
 boot<-recluster.boot(tree,tr=5,boot=50,datamod)
 recluster.plot(tree,boot,direction="downwards")
+
+data(treemod)
+tree<-recluster.cons(datamod,treemod, dist="phylosort", tr=10)
+boot<-recluster.boot(tree, datamod, treemod,tr=5,boot=50)
+recluster.plot(tree,boot,direction="downwards")
+
 }
 \keyword{ cluster }

@@ -18,7 +18,7 @@ License: \tab GPL (>= 2.0)\cr
 }
 }
 \author{
-Leonardo Dapporto, Matteo Ramazzotti, Simone Fattorini, Roger Vila, Gerard Telavera, Roger H.L. Dennis
+Leonardo Dapporto, Matteo Ramazzotti, Simone Fattorini, Roger Vila, Gerard Talavera, Roger H.L. Dennis
 
 Maintainer: Leonardo Dapporto <leondap@gmail.com>
 
