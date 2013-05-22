@@ -4,40 +4,55 @@
 Consensus tree among re-sampled trees 
 }
 \description{
-This function creates a series of tree by resampling the order row in the original matrix. Then, it computes a consensus among them. The resulting tree is unaffected by original row order.
+This function creates a series of trees by resampling the order of sites in the dissimilarity matrix. Then, it computes a consensus among them. The resulting tree is unaffected by original row order.
 }
 \usage{
-recluster.cons(mat, phylo = NULL, tr = 100, p = 0.5, dist = "simpson", method = "average")
+recluster.cons(mat, phylo = NULL, tr = 100, p = 0.5, 
+dist = "simpson", method = "average", blenghts=TRUE, select=FALSE)
 }
 \arguments{
   \item{mat}{
 A matrix containing sites (rows) and species (columns).
 }
   \item{phylo}{
-An ultrametric and rooted phylo tree for species having the same labels as in mat columns. Only required for phylogenitic beta-diversity indexes.
+An ultrametric and rooted phylogenetic tree for species having the same labels as in mat columns. Only required for phylogenitic beta-diversity indexes.
 }
   \item{tr}{
 The number of trees to be used for the consensus.
 }
   \item{p}{
-a numeric value between 0.5 and 1 giving the proportion for a clade to be represented in the consensus tree.
+A numeric value between 0.5 and 1 giving the proportion for a clade to be represented in the consensus tree.
 }
   \item{dist}{
 One among the twelve beta-diversity indexes \code{"simpson" "sorensen" "nestedness" "beta3" "richness" "jaccard" "phylosor" "phylosort" "phylosorpd" "unifrac" "unifract" "unifractpd"}. Any custom binary dissimilarity can also be specified according to the syntax of designdist function of the vegan package.
 
 }
-    \item{method}{
+   \item{method}{
 Any clustering method allowed by hclust.
+}
+   \item{blenghts}{
+A logical asking if non-negative least squares branch lengths should be computed.
+}
+   \item{select}{
+A logical asking if only trees having higher than median fit in the least squares regression should be included in the consensus analysis.
 }
 }
 \details{
-According to the primitive "consensus" function from the "ape" package, p must range between 0.5 and 1.
+According to the primitive "consensus" function from the "ape" package, p must range between 0.5 and 1. Select = TRUE can allow lowering polytomies by removing trees with topology showing particularly low correlation with the distance matrix.
 }
 \value{
-An object of class phylo.
+	\item{cons}{
+The consensus tree, an object of class phylo.
+	}
+	\item{trees}{
+The trees used to construct the final consensus tree.
+	}
+	\item{RSS}{
+The Residual Sum of Squares for the trees resulting if select=TRUE.
+	}
 }
 \references{
-Dapporto L., Ramazzotti M., Fattorini S., Vila R., Talavera G., Dennis R. 
+Dapporto L., Ramazzotti M., Fattorini S., Vila R., Dennis R. 
 "recluster: an unbiased clustering procedure for beta-diversity turnover"
 XXXX (2013), XXX:XXX.
 \url{
@@ -49,13 +64,12 @@ Leonardo Dapporto and Matteo Ramazzotti
 }
 \examples{
 #Faunistic beta diversity
-data(datamod)
+data(datamod,treemod)
 tree<-recluster.cons(datamod,tr=10)
-plot(tree,direction="downwards")
+plot(tree$cons,direction="downwards")
 
 #Phylogenetic beta diversity
-data(treemod)
 tree_p<-recluster.cons(datamod,treemod,dist="phylosort",tr=10)
-plot(tree_p, direction="downwards")
+plot(tree_p$cons, direction="downwards")
 }
 \keyword{ cluster }

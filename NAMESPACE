@@ -1,2 +1,2 @@
-export ("recluster.boot","recluster.cons","recluster.dist","recluster.multi","recluster.plot","recluster.hist","recluster.node.strength","recluster.identify.nodes")
-import(ape, vegan, picante, cluster)
+export ("recluster.boot","recluster.cons","recluster.dist","recluster.multi","recluster.plot","recluster.hist","recluster.node.strength","recluster.identify.nodes","recluster.col","recluster.plot.col","recluster.plot.sites.col","recluster.plot.matrix","recluster.expl.diss","recluster.group.col")
+import(ape, vegan, picante, cluster, phangorn,phytools)

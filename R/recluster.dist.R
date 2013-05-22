@@ -1,4 +1,4 @@
-recluster.dist <-function(mat, phylo=NULL, dist=c("simpson","sorensen","nestedness","beta3","richness","jaccard","phylosor","phylosort","phylosorpd","unifrac","unifract","unifracpd")) {
+recluster.dist <-function(mat, phylo=NULL, dist="simpson") {
                                                    
 	mat<-as.matrix(mat)
 	if(is.numeric(mat) == "FALSE") 	stop("ERROR: not numeric matrix")
@@ -12,7 +12,7 @@ recluster.dist <-function(mat, phylo=NULL, dist=c("simpson","sorensen","nestedne
 			return(res)
 	}
 
-	dist <- match.arg(dist)
+	dist <- match.arg(dist,options)
 
 	res <- switch(dist,
 		simpson = {

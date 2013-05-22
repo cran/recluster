@@ -30,6 +30,6 @@ www.unifi.it/scibio/bioinfo/recluster.html
 }
 }
 \author{
-Leonadro Dapporto and Matteo Ramazzotti
+Leonardo Dapporto and Matteo Ramazzotti
 }
 \keyword{ internal }

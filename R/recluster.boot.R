@@ -10,7 +10,7 @@ recluster.boot <- function (tree,mat,phylo=NULL,tr=100,p=0.5,dist="simpson", met
 				break
 			}
 		}
-		treesb[[i]]<-recluster.cons(xs,phylo,tr,p,dist)
+		treesb[[i]]<-recluster.cons(xs,phylo,tr,p,dist)$cons
 	}
 	btr2 <- .compressTipLabel(treesb)
 	tr2 <- recluster.check(tree, attr(btr2, "TipLabel"))

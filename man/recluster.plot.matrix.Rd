@@ -1,21 +1,21 @@
-\name{recluster.hist}
-\alias{recluster.hist}
+\name{recluster.plot.matrix}
+\alias{recluster.plot.matrix}
 \title{
-Histogram with tied and zero values
+Plot cell values of a matrix in grey scale
 }
 \description{
-This function creates a histogram where the number of cells with zero value are explicitely showed in the first bar. Moreover, it provides the percentage of cells having equal values in the matrix.
+This function plots values of single cells of a matrix in grey scale.
 }
 \usage{
-recluster.hist(x)
+recluster.plot.matrix(mat)
 }
 \arguments{
-  \item{x}{
+  \item{mat}{
 A dissimilarity matrix.
 }
 }
 \value{
-An histogram with supplementary information. The first bar only shows the zero values.
+A plot of cell values.
 }
 \references{
 Dapporto L., Ramazzotti M., Fattorini S., Vila R., Talavera G., Dennis R. 
@@ -31,6 +31,6 @@ Leonardo Dapporto and Matteo Ramazzotti
 \examples{
 data(datamod)
 simpdiss<- recluster.dist(datamod)
-recluster.hist(simpdiss)
+recluster.plot.matrix(simpdiss)
 }
 \keyword{ dissimilarity }

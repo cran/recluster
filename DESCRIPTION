@@ -1,9 +1,9 @@
 Package: recluster
 Type: Package
 Title: Solving biasing produced by tied values in cluster analysis.
-Version: 1.9
-Date: 2013-02-16
-Depends: ape, vegan, picante, cluster
+Version: 2.1
+Date: 2013-05-22
+Depends: ape, vegan, picante, cluster, phangorn, phytools
 Author: Leonardo Dapporto, Matteo Ramazzotti, Simone Fattorini, Roger
         Vila, Gerard Talavera, Roger H.L. Dennis
 Maintainer: Leonardo Dapporto <leondap@gmail.com>
@@ -17,7 +17,7 @@ Description: A high frequency of ties and zero values produces
 License: GPL (>= 2.0)
 LazyLoad: yes
 URL: http://www.unifi.it/scibio/bioinfo/recluster.html
-Packaged: 2013-03-29 13:46:41 UTC; matteo
+Packaged: 2013-05-22 06:20:44 UTC; matteo
 NeedsCompilation: no
 Repository: CRAN
-Date/Publication: 2013-03-29 14:56:49
+Date/Publication: 2013-05-22 09:34:46

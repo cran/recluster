@@ -7,7 +7,8 @@ A plotter for recluster bootstrapped objects
 This function produce plots for recluster trees and assign single or pairs of support values for single or multilevel analyses.
 }
 \usage{
-recluster.plot(tree, data, low = 1, high = 0, id=NULL, nodelab.cex=0.8, direction="downwards",...)
+recluster.plot(tree, data, low = 1, high = 0, id=NULL, 
+nodelab.cex=0.8, direction="downwards",...)
 }
 
 \arguments{
@@ -42,7 +43,7 @@ A plot representing the tree with pairs of bootstrap values, low (usually x1 BP 
 }
 \details{
 This function allow to select up to two labels for nodes based on bootstrap values nad optimize their layout.
-Thisis done with the \code{nodelabels} ape function, by specifying the \code{adj} parameters in the appropriate way.
+This is done with the \code{nodelabels} ape function, by specifying the \code{adj} parameters in the appropriate way.
 }
 \references{
 Dapporto L., Ramazzotti M., Fattorini S., Vila R., Talavera G., Dennis R. 
@@ -58,8 +59,8 @@ Leonardo Dapporto and Matteo Ramazzotti
 \examples{
 data(datamod)
 tree<-recluster.cons(datamod, tr=10)
-boot<-recluster.boot(tree,datamod, tr=10, boot=50)
-recluster.plot(tree,boot,direction="downwards")
+boot<-recluster.boot(tree$cons,datamod, tr=10, boot=50)
+recluster.plot(tree$cons,boot,direction="downwards")
 }
 \keyword{ hplot }
 

@@ -7,7 +7,8 @@ Multiscale bootstrap based on consensus trees
 Given an initial tree and a data matrix, this function computes bootstrap for nodes as done by recluster.boot. Several levels of bootstrap can be computed by varying the number of levels and the step in increasing proportions of species sampled from the original matrix.
 }
 \usage{
-recluster.multi(tree, mat, phylo = NULL, tr = 100, p = 0.5, dist = "simpson", method = "average", boot = 1000, levels = 2, step = 1)
+recluster.multi(tree, mat, phylo = NULL, tr = 100, p = 0.5, 
+dist = "simpson", method = "average", boot = 1000, levels = 2, step = 1)
 }
 \arguments{
   \item{tree}{
@@ -17,7 +18,7 @@ A reference phylo tree for sites presumably constructed with recluster.cons func
 The matrix used to construct the tree.
 }
   \item{phylo}{
-An ultrametric and rooted phylo tree for species having the same labels as in mat columns. Only required for phylogenitic beta-diversity indexes.
+An ultrametric and rooted phylo tree for species having the same labels as in mat columns. Only required for phylogenetic beta-diversity indexes.
 }
   \item{tr}{
 The number of trees to be included in the consensus.
@@ -62,8 +63,8 @@ Leonardo Dapporto and Matteo Ramazzotti
 \examples{
 data(datamod)
 tree<-recluster.cons(datamod,tr=10)
-multiboot<-recluster.multi(tree,tr=10,boot=50,datamod,levels=2,step=1)
-recluster.plot(tree,multiboot,1,2,direction="downwards")
+multiboot<-recluster.multi(tree$cons,tr=10,boot=50,datamod,levels=2,step=1)
+recluster.plot(tree$cons,multiboot,1,2,direction="downwards")
 }
 
 \keyword{ cluster }

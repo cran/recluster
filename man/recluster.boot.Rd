@@ -7,7 +7,8 @@ Bootstrap nodes of consensus trees
 Given an initial tree and a data matrix, this function computes bootstrap for nodes. Each tree used for bootstrap can be constructed by re-sampling the row order several times and by applying a consensus rule as done by recluster.cons. The number of sampled columns (species) can be varied.
 }
 \usage{
-recluster.boot(tree, mat, phylo = NULL, tr = 100, p = 0.5, dist = "simpson", method = "average", boot = 1000, level = 1)
+recluster.boot(tree, mat, phylo = NULL, tr = 100, p = 0.5, 
+dist = "simpson", method = "average", boot = 1000, level = 1)
 }
 \arguments{
   \item{tree}{
@@ -17,7 +18,7 @@ A reference phylo tree for sites presumably constructed with recluster.cons func
 The matrix used to construct the tree.
 }
   \item{phylo}{
-An ultrametric and rooted phylo tree for species having the same labels as in mat columns. Only required for phylogenitic beta-diversity indexes.
+An ultrametric and rooted phylogenetic tree for species having the same labels as in mat columns. Only required for phylogenetic beta-diversity indices.
 }
   \item{tr}{
 The number of trees to be included in the consensus.
@@ -58,13 +59,13 @@ Leonardo Dapporto and Matteo Ramazzotti
 \examples{
 data(datamod)
 tree<-recluster.cons(datamod,tr=10)
-boot<-recluster.boot(tree,tr=5,boot=50,datamod)
-recluster.plot(tree,boot,direction="downwards")
+boot<-recluster.boot(tree$cons,tr=5,boot=50,datamod)
+recluster.plot(tree$cons,boot,direction="downwards")
 
 data(treemod)
 tree<-recluster.cons(datamod,treemod, dist="phylosort", tr=10)
-boot<-recluster.boot(tree, datamod, treemod,tr=5,boot=50)
-recluster.plot(tree,boot,direction="downwards")
+boot<-recluster.boot(tree$cons, datamod, treemod,tr=5,boot=50)
+recluster.plot(tree$cons,boot,direction="downwards")
 
 }
 \keyword{ cluster }
