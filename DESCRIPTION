@@ -1,23 +1,18 @@
 Package: recluster
 Type: Package
-Title: Solving biasing produced by tied values in cluster analysis.
-Version: 2.1
-Date: 2013-05-22
-Depends: ape, vegan, picante, cluster, phangorn, phytools
+Title: Ordination methods for the analysis of beta-diversity indices.
+Version: 2.5
+Date: 2013-07-02
+Depends: vegan, ape
+Imports: picante, phangorn, phytools, cluster
 Author: Leonardo Dapporto, Matteo Ramazzotti, Simone Fattorini, Roger
         Vila, Gerard Talavera, Roger H.L. Dennis
 Maintainer: Leonardo Dapporto <leondap@gmail.com>
-Description: A high frequency of ties and zero values produces
-        hierarchical cluster dendrograms whose topology and bootstrap
-        supports are affected by the order of rows in the original
-        matrix. The recluster package evaluates the magnitude of this
-        bias and computes consensus trees after re-sampling the
-        original row order also applying this algorithm to a multiscale
-        bootstrap procedure.
+Description: Beta-diversity indices provide dissimilarity matrices with particular distribution of data requiring specific treatment. For example the high frequency of ties and zero values in turnover indices produces hierarchical cluster dendrograms whose topology and bootstrap supports are affected by the order of rows in the original matrix. Moreover, biogeographical regionalization can be facilitated by a combination of hierarchical clustering and multi-dimensional scaling. The recluster package provides robust techniques to analyze pattern of similarity in species composition.
 License: GPL (>= 2.0)
 LazyLoad: yes
 URL: http://www.unifi.it/scibio/bioinfo/recluster.html
-Packaged: 2013-05-22 06:20:44 UTC; matteo
+Packaged: 2013-07-30 22:55:33 UTC; matteo
 NeedsCompilation: no
 Repository: CRAN
-Date/Publication: 2013-05-22 09:34:46
+Date/Publication: 2013-07-31 21:27:38

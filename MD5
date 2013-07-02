@@ -1,5 +1,5 @@
-84fac9786f16b3d7348ef6437f7398db *DESCRIPTION
-6b0bc077e42aab043600c016a4ecde66 *NAMESPACE
+fcd081e5294ac33f2ee875d086247907 *DESCRIPTION
+99b60b7c45e8aa520a53402fed1f0b5e *NAMESPACE
 2dfbf5a38ddee305e01e91b8feb0d05d *R/beta.pd.utils.R
 12c2b5eeaf6acc823b4efa049c5b7dc5 *R/betajac.pd.R
 4ccbac3f8a64e71ff7fd844846e9747c *R/betasor.pd.R
@@ -10,10 +10,10 @@
 775e1724ef0827be7a1d12fae2d59103 *R/phylosort.R
 a34c092049f81c8ff31a8f0be5fc01bc *R/recluster.boot.R
 ca111629287839659677d379e7037d61 *R/recluster.check.R
-28cc5d4c7346e956f2ab321d31c2282e *R/recluster.col.R
+29dfd87f62e63bdce9098dfb7a7b4b0f *R/recluster.col.R
 53389d77d22d5c825309aafdaec5d9b3 *R/recluster.cons.R
 5ec16480f52f5a3868258d5423a876ec *R/recluster.dist.R
-e8047e0cfa0eb75b33647045faffb0a2 *R/recluster.expl.diss.R
+50eaeb252b6a5bde1b3847b67f9edcb0 *R/recluster.expl.diss.R
 8c0e542dc9f71609b9209fa05174d895 *R/recluster.group.colours.R
 04e45fbaed0c5851cf43474706696b0f *R/recluster.hist.R
 dc42ee77a6304ed05bbcb29845b1afb8 *R/recluster.identify.nodes.R
@@ -40,7 +40,7 @@ dd074515d107419ad6a275bb16ce9483 *man/recluster.Rd
 00aebdc5bc496f6290a6d57053e15ab6 *man/recluster.col.Rd
 beb0812b456b4c1cdc7385fea856a78b *man/recluster.cons.Rd
 b5ad7f378ab0e6c99d8c1d3046be2dc1 *man/recluster.dist.Rd
-541a6ee77815af20aa07a0f7794b9b4e *man/recluster.expl.diss.Rd
+9f3a7b3e9fd97403564a92d7c32bd357 *man/recluster.expl.diss.Rd
 8501595f4128a4ff16b833810dd39631 *man/recluster.group.col.Rd
 a672ee2fc978b9e49e1d4fddca070b8d *man/recluster.hist.Rd
 267a0807bc43b48f55281cec138ddc92 *man/recluster.identify.nodes.Rd

@@ -1,2 +1,8 @@
 export ("recluster.boot","recluster.cons","recluster.dist","recluster.multi","recluster.plot","recluster.hist","recluster.node.strength","recluster.identify.nodes","recluster.col","recluster.plot.col","recluster.plot.sites.col","recluster.plot.matrix","recluster.expl.diss","recluster.group.col")
-import(ape, vegan, picante, cluster, phangorn,phytools)
+importFrom(phytools, nodeHeights, treeSlice)
+importFrom(phangorn, nnls.tree)
+importFrom(picante, phylosor, node.age)
+importFrom(cluster, pam)
+importFrom(vegan, metaMDS, designdist)
+import(ape)
+
