@@ -1,13 +1,13 @@
 \name{recluster.expl.diss}
 \alias{recluster.expl.diss}
 \title{
-Compute explained dissimilarity of all possible cuts of a given tree
+Cut a phylogenetic tree to a given series of nodes and computes explained dissimilarity.
 }
 \description{
-This function compute the fraction of the diversity contained in a dissimilarity matrix which is explained by any possible cut of a given tree constructed on that matrix.
+This function cuts a phylogenetic tree at any given series of nodes, provides membership for each element in the series of resulting clusters and computes the fraction of dissimilarity explained by each cut.
 }
 \usage{
-recluster.expl.diss(tree, dist, maxcl=NULL)
+recluster.expl.diss(tree, dist, maxcl=NULL, mincl=NULL, expld=TRUE) 
 }
 \arguments{
   \item{tree}{
@@ -17,7 +17,13 @@ A phylo tree
 A dissimilarity matrix.
 }
  \item{maxcl}{
-A custom maximum number of clusters.
+A custom number indicated the most external node to be cutted. If NULL all the nodes are cutted.
+}
+ \item{mincl}{
+A custom number indicated the most internal node to be cutted. If NULL the root is uded
+}
+\item{expld}{
+A logical. If TRUE then the matrix for explained dissimilarity is computed.
 }
 }
 \details{
@@ -35,15 +41,15 @@ A vector indicating the number of clusters resulting from each cut.
  }
 }	
 \references{
-Holt B. et al. 
-"An Update of Wallace's Zoogeographic Regions of the World." 
-Science (2013), 339, 74-78. 
+Dapporto L. et al 
+"A new procedure for extrapolating turnover regionalization at mid-small spatial scales, tested on  British butterflies."
+submitted
 \url{
 www.unifi.it/scibio/bioinfo/recluster.html
 }
 }
 \author{
-Leonardo Dapporto and Matteo Ramazzotti
+Leonardo Dapporto
 }
 \examples{
 data(datamod)

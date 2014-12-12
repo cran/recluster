@@ -18,7 +18,7 @@ A logical value indicating if lower scales should be favoured in the selection.
 }
   }
 \details{
-This function mainly serves to recognize nodes showing different rates of support increasing at some stage of a multilevel bootstrap. In the analysis of turnover in biogeography some nodes may show a rapidly increasing support in a multiscale bootstrap. This means that the areas connected by these nodes host only a few species responsible for turnover, but the biogeographic pattern with respect to other areas is clear. Another kind of node may show a slow (or no) increase in support. The links among areas are actually uncertain. Partitioning Around Medioids is used to identify two classes of nodes at each level, then the bootstrap level showing the best diversification in two classes is identified by silhouette scores weighted by differences in mean values between classes. If low is set to  and favouring low scales. 
+This function recognizes nodes showing different trends of support in multiscale bootstrap. In the analysis of turnover in biogeography some nodes may show a substantial increase in support in a multiscale bootstrap. This means that the areas connected by these nodes host a few species responsible for turnover, but the biogeographic pattern with respect to other areas is clear. Other nodes may show a slow (or no) increase in support. In this case, the links among areas are actually uncertain. Partitioning Around Medioids is used to identify two classes of nodes at each level, then the bootstrap scale showing the best diversification in two classes is identified by silhouette scores weighted by differences in mean values between classes. If "low" is set to TRUE the function favours low scales. 
 }
 \value{
 A plot with bootstrap supports and their means (diamonds) for the best combination of two groups of nodes (black and red).
@@ -30,14 +30,12 @@ A vector containing classification for nodes in the best bootstrap scale.
 }
 	}
 \references{
-Dapporto L., Ramazzotti M., Fattorini S., Vila R., Talavera G., Dennis R. 
+Dapporto L., Ramazzotti M., Fattorini S., Talavera G., Vila R., Dennis R. 
 "recluster: an unbiased clustering procedure for beta-diversity turnover"
-XXXX (2013), XXX:XXX.
+Ecography (2013), 36:1070-1075.
 \url{
 www.unifi.it/scibio/bioinfo/recluster.html
 }
-
-
 }
 \author{
 Leonardo Dapporto and Matteo Ramazzotti

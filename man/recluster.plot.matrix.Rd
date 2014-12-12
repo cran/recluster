@@ -4,7 +4,7 @@
 Plot cell values of a matrix in grey scale
 }
 \description{
-This function plots values of single cells of a matrix in grey scale.
+This function plots the values of the cells of a matrix in grey scale.
 }
 \usage{
 recluster.plot.matrix(mat)
@@ -18,9 +18,8 @@ A dissimilarity matrix.
 A plot of cell values.
 }
 \references{
-Dapporto L., Ramazzotti M., Fattorini S., Vila R., Talavera G., Dennis R. 
-"recluster: an unbiased clustering procedure for beta-diversity turnover"
-XXXX (2013), XXX:XXX.
+Dapporto, L., Fattorini, S., Vod?, R., Dinc?, V., Vila, R. "Biogeography of western Mediterranean butterflies: combining turnover and nestedness components of faunal dissimilarity." 
+J Biogeogr (2014), 41: 1639-1650. 
 \url{
 www.unifi.it/scibio/bioinfo/recluster.html
 }

@@ -15,7 +15,7 @@ dist = "simpson", method = "average", blenghts=TRUE, select=FALSE)
 A matrix containing sites (rows) and species (columns).
 }
   \item{phylo}{
-An ultrametric and rooted phylogenetic tree for species having the same labels as in mat columns. Only required for phylogenitic beta-diversity indexes.
+An ultrametric and rooted tree for species phylogeny having the same labels as in mat columns. Only required for phylogenitic beta-diversity indexes.
 }
   \item{tr}{
 The number of trees to be used for the consensus.
@@ -24,8 +24,7 @@ The number of trees to be used for the consensus.
 A numeric value between 0.5 and 1 giving the proportion for a clade to be represented in the consensus tree.
 }
   \item{dist}{
-One among the twelve beta-diversity indexes \code{"simpson" "sorensen" "nestedness" "beta3" "richness" "jaccard" "phylosor" "phylosort" "phylosorpd" "unifrac" "unifract" "unifractpd"}. Any custom binary dissimilarity can also be specified according to the syntax of designdist function of the vegan package.
-
+A beta-diversity index (the Simpson index by default) included in recluster.dist or any custom binary dissimilarity to be specified according to the syntax of designdist function of the vegan package.
 }
    \item{method}{
 Any clustering method allowed by hclust.
@@ -38,7 +37,7 @@ A logical asking if only trees having higher than median fit in the least square
 }
 }
 \details{
-According to the primitive "consensus" function from the "ape" package, p must range between 0.5 and 1. Select = TRUE can allow lowering polytomies by removing trees with topology showing particularly low correlation with the distance matrix.
+According to the primitive "consensus" function from the "ape" package, p must range between 0.5 and 1. Select = TRUE can allow lowering polytomies by removing trees with topology showing particularly low correlation with the distance matrix. Row names are required.
 }
 \value{
 	\item{cons}{
@@ -52,9 +51,9 @@ The Residual Sum of Squares for the trees resulting if select=TRUE.
 	}
 }
 \references{
-Dapporto L., Ramazzotti M., Fattorini S., Vila R., Dennis R. 
+Dapporto L., Ramazzotti M., Fattorini S., Talavera G., Vila R., Dennis R. 
 "recluster: an unbiased clustering procedure for beta-diversity turnover"
-XXXX (2013), XXX:XXX.
+Ecography (2013), 36:1070-1075.
 \url{
 www.unifi.it/scibio/bioinfo/recluster.html
 }

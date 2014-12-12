@@ -18,9 +18,9 @@ A dissimilarity matrix.
 An histogram with supplementary information. The first bar only shows the zero values.
 }
 \references{
-Dapporto L., Ramazzotti M., Fattorini S., Vila R., Talavera G., Dennis R. 
+Dapporto L., Ramazzotti M., Fattorini S., Talavera G., Vila R., Dennis R. 
 "recluster: an unbiased clustering procedure for beta-diversity turnover"
-XXXX (2013), XXX:XXX.
+Ecography (2013), 36:1070-1075.
 \url{
 www.unifi.it/scibio/bioinfo/recluster.html
 }

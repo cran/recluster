@@ -24,9 +24,10 @@ An oject of the class phylo
 \references{
 Leprieur F., Albouy C., De Bortoli J., Cowman P.F., Bellwood D.R., et al. Quantifying Phylogenetic Beta Diversity: Distinguishing between "True" Turnover of Lineages and Phylogenetic Diversity Gradients. PLoS ONE (2012), 7(8), e42760. doi:10.1371/journal.pone.0042760
 
-Dapporto L., Ramazzotti M., Fattorini S., Vila R., Talavera G., Dennis R. 
+Dapporto L., Ramazzotti M., Fattorini S., Talavera G., Vila R., Dennis R. 
 "recluster: an unbiased clustering procedure for beta-diversity turnover"
-XXXX (2013), XXX:XXX.
+Ecography (2013), 36:1070-1075.
+
 \url{
 www.unifi.it/scibio/bioinfo/recluster.html
 }

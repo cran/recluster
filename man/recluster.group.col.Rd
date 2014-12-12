@@ -4,7 +4,7 @@
 Compute mean coordinate values and RGB colours.
 }
 \description{
-This function computes mean coordinate values and RGB colours for cases belonging to the same group from an original RGB colour space.
+This function computes barycenters and their RGB colours for cases belonging to the same group in an original RGB colour matrix obtained by recluster.col.
 }
 \usage{
 recluster.group.col(mat,member)
@@ -26,9 +26,12 @@ A matrix in the recluster.col format with mean RGB colours computed for the grou
  }
 }	
 \references{
-Kreft H., Jetz, W. 2010. 
+Kreft H., Jetz, W.
 "A framework for delineating biogeographic regions based on species distributions" 
 J Biogeogr (2010),37: 2029-2053.
+
+Dapporto, L., Fattorini, S., Voda, R., Dinca, V., Vila, R. "Biogeography of western Mediterranean butterflies: combining turnover and nestedness components of faunal dissimilarity." 
+J Biogeogr (2014), 41: 1639-1650. 
 \url{
 www.unifi.it/scibio/bioinfo/recluster.html
 }

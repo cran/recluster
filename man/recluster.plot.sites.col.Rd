@@ -4,11 +4,11 @@
 Plotting RGB dots on a custom coordinate space
 }
 \description{
-This function plots the RGB dots belonging to a matrix obtained by recluster.col on a user defined set of coordinates (usually longitude-latitude) for original sites. 
+This function plots the RGB dots belonging to a matrix obtained by recluster.col on a user defined set of coordinates (usually longitude and latitude) for original sites. 
 }
 \usage{
-recluster.plot.sites.col(long, lat, mat, cext = 0.3, cex = 1, cex.axis = 0.7, 
-cex.lab = 0.8, text=FALSE,...)
+recluster.plot.sites.col (long, lat, mat, cext = 0.3, cex = 1, cex.axis = 0.7, 
+cex.lab = 0.8, text = FALSE, pch=21, add = FALSE,...) 
 }
 \arguments{
 	\item{long}{
@@ -35,6 +35,12 @@ Dimension of axis labels.
  \item{cex.lab}{
 Dimension of labels.
 }
+ \item{add}{
+A logical. If TRUE then the points are added to an existing graph.
+}
+ \item{pch}{
+The symbol to use when plotting points
+}
  \item{...}{
 See par() for other graphical parameters
   }
@@ -43,9 +49,8 @@ See par() for other graphical parameters
 A colour plot. 
 }
 \references{
-Kreft H., Jetz, W. 2010. 
-"A framework for delineating biogeographic regions based on species distributions" 
-J Biogeogr (2010),37: 2029-2053.
+Dapporto, L., Fattorini, S., Vod?, R., Dinc?, V., Vila, R. "Biogeography of western Mediterranean butterflies: combining turnover and nestedness components of faunal dissimilarity." 
+J Biogeogr (2014), 41: 1639-1650. 
 \url{
 www.unifi.it/scibio/bioinfo/recluster.html
 }

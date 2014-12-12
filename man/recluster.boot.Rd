@@ -18,7 +18,7 @@ A reference phylo tree for sites presumably constructed with recluster.cons func
 The matrix used to construct the tree.
 }
   \item{phylo}{
-An ultrametric and rooted phylogenetic tree for species having the same labels as in mat columns. Only required for phylogenetic beta-diversity indices.
+An ultrametric and rooted tree for species phylogeny having the same labels as in mat columns. Only required for phylogenetic beta-diversity indices.
 }
   \item{tr}{
 The number of trees to be included in the consensus.
@@ -27,7 +27,7 @@ The number of trees to be included in the consensus.
 A numeric value between 0.5 and 1 giving the proportion for a clade to be represented in the consensus tree.
 }
   \item{dist}{
-One among the twelve beta-diversity indexes \code{"simpson" "sorensen" "nestedness" "beta3" "richness" "jaccard" "phylosor" "phylosort" "phylosorpd" "unifrac" "unifract" "unifractpd"}. Any custom binary dissimilarity can also be specified according to the syntax of designdist function of the vegan package.
+A beta-diversity index (the Simpson index by default) included in recluster.dist or any custom binary dissimilarity to be specified according to the syntax of designdist function of the vegan package.
 }
   \item{method}{
 Any clustering method allowed by hclust.
@@ -46,9 +46,9 @@ Computation can be time consuming due to the high number of trees required for a
 A vector indicating the percentage of bootstrap trees replicating each original node.
 }
 \references{
-Dapporto L., Ramazzotti M., Fattorini S., Vila R., Talavera G., Dennis R. 
+Dapporto L., Ramazzotti M., Fattorini S., Talavera G., Vila R., Dennis R. 
 "recluster: an unbiased clustering procedure for beta-diversity turnover"
-XXXX (2013), XXX:XXX.
+Ecography (2013), 36:1070-1075.
 \url{
 www.unifi.it/scibio/bioinfo/recluster.html
 }
