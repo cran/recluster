@@ -13,8 +13,8 @@ For example the high frequency of ties and zero values in turnover indices produ
 \tabular{ll}{
 Package: \tab recluster\cr
 Type: \tab Package\cr
-Version: \tab 2.0\cr
-Date: \tab 2013-02-12\cr
+Version: \tab 2.8\cr
+Date: \tab 2015-02-22\cr
 License: \tab GPL (>= 2.0)\cr
 }
 }
@@ -87,7 +87,8 @@ recluster.plot.sites.col(long, lat, ncol$all,text=TRUE)
 
 #Use recluster.region procedure on island butterflies
 data(dataisl)
-turn_cl<-recluster.region(dataisl,tr=100,rettree=TRUE)
+simpson<-recluster.dist(dataisl)
+turn_cl<-recluster.region(simpson,tr=10,rettree=TRUE)
 turn_cl
 
 #Select solution with three cluster and plot the tree.

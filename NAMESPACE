@@ -2,7 +2,7 @@ export ("recluster.boot","recluster.cons","recluster.dist","recluster.multi","re
 importFrom("phytools", nodeHeights, treeSlice)
 importFrom("phangorn", nnls.tree)
 importFrom("picante", phylosor, node.age)
-importFrom("cluster", pam, silhouette)
+importFrom("cluster", pam, silhouette, diana)
 importFrom("vegan", metaMDS, designdist, scores)
 import("ape")
 

@@ -4,7 +4,7 @@
 Consensus tree among re-sampled trees 
 }
 \description{
-This function creates a series of trees by resampling the order of sites in the dissimilarity matrix. Then, it computes a consensus among them. The resulting tree is unaffected by original row order.
+This function creates a series of trees by resampling the order of sites in the original dissimilarity matrix. Then, it computes a consensus among them. The resulting tree is unaffected by original row order.
 }
 \usage{
 recluster.cons(mat, phylo = NULL, tr = 100, p = 0.5, 
@@ -12,10 +12,10 @@ dist = "simpson", method = "average", blenghts=TRUE, select=FALSE)
 }
 \arguments{
   \item{mat}{
-A matrix containing sites (rows) and species (columns).
+A matrix containing sites (rows) and species (columns) or any dissimilarity matrix.
 }
   \item{phylo}{
-An ultrametric and rooted tree for species phylogeny having the same labels as in mat columns. Only required for phylogenitic beta-diversity indexes.
+An ultrametric and rooted tree for species phylogeny having the same labels as in mat columns. Only required to compute phylogenitic beta-diversity indexes.
 }
   \item{tr}{
 The number of trees to be used for the consensus.

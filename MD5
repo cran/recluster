@@ -1,5 +1,5 @@
-cf81fa495efa61d60a0a4a38756597e6 *DESCRIPTION
-48ac460221efd20adc826aaf4c62aea0 *NAMESPACE
+b4d7c83911baa2e5a9ebf96f5bfde7ec *DESCRIPTION
+1772f88bc64f02a90a7c9fc1d43db8ab *NAMESPACE
 2dfbf5a38ddee305e01e91b8feb0d05d *R/beta.pd.utils.R
 12c2b5eeaf6acc823b4efa049c5b7dc5 *R/betajac.pd.R
 4ccbac3f8a64e71ff7fd844846e9747c *R/betasor.pd.R
@@ -10,8 +10,8 @@ cf81fa495efa61d60a0a4a38756597e6 *DESCRIPTION
 775e1724ef0827be7a1d12fae2d59103 *R/phylosort.R
 a34c092049f81c8ff31a8f0be5fc01bc *R/recluster.boot.R
 ca111629287839659677d379e7037d61 *R/recluster.check.R
-f77014332c74bae9aa2cd2a669495b87 *R/recluster.col.R
-53389d77d22d5c825309aafdaec5d9b3 *R/recluster.cons.R
+70b3ff15f278c3509f6294d80c82462f *R/recluster.col.R
+07641d214e57a941e71eb9ae79dd73f1 *R/recluster.cons.R
 6857f5e129f04723050737d79e4742cb *R/recluster.dist.R
 9d0eb57ee64709731c82be69ef271187 *R/recluster.expl.R
 e8b406a6b1e50f01cef34c801d2a2f69 *R/recluster.expl.diss.R
@@ -26,7 +26,7 @@ bed58a7cc0accb1fc39d3a0195b60c3f *R/recluster.multi.R
 2de60e324eec14b063b538e6f4bd3938 *R/recluster.plot.matrix.R
 a9fc95fa4215ac8b8686df3615af7a92 *R/recluster.plot.sites.col.R
 943b61b231fb62260de35e7fb4b7536e *R/recluster.procrustes.R
-f70327b4c1c439c10fef306e884cf6ca *R/recluster.region.R
+15dd6a2cb926759f14b3c7d03d29a37a *R/recluster.region.R
 76f392f43d41c47a3cb4e71778c0fe9e *R/recluster.rotate.R
 6a6371e0db12307cd13b4988a2416dba *R/recluster.test.dist.R
 4c77d446e9d0630d552309ba97eeb23d *R/unifrac.R
@@ -40,11 +40,11 @@ fec48b126f671fb8fd6e64ab62d7be6d *data/treemod.rda
 bde14effda0881c247b9e6029249dc1f *man/dataisl.Rd
 e357fffef21fe004ed4f4b2200263033 *man/datamod.Rd
 3cd37adc00d787cfe0ab1171f65cc94f *man/multiboot.Rd
-b8dacad295e6977e1ec2ffd1f221b298 *man/recluster.Rd
+ab80ea1df2e4d7cd78a94cea858fc642 *man/recluster.Rd
 a938415e9825bd0c1a1612367f81c702 *man/recluster.boot.Rd
 df05c71f7b56f08030cb5b13ef7ad6dc *man/recluster.check.Rd
 24e8b167598d3cf3016f6a71889cc9ad *man/recluster.col.Rd
-ac3190aec16d4008e9b20b79e3e3415a *man/recluster.cons.Rd
+3277b866a5bd22645c9aa1f744c42b1e *man/recluster.cons.Rd
 04e99e8ab609360e65a4d0d60e8a222b *man/recluster.dist.Rd
 2b0b8d7ee1f07913e09dbf564e37b092 *man/recluster.expl.Rd
 ec6a5dcea444bcf5e8fefb18f170c05a *man/recluster.expl.diss.Rd
@@ -60,7 +60,7 @@ f3f676bd1263ef0b2f3dd6edde2872c1 *man/recluster.plot.Rd
 45cf2305381024ce5c6291af3c1e1e40 *man/recluster.plot.matrix.Rd
 2cf7ea51a6a53b872e0176946474b449 *man/recluster.plot.sites.col.Rd
 d31a88d0f8f2237db6e3d9e453e6d141 *man/recluster.procrustes.Rd
-bddcae86eca9b255d65f6228afdcb69c *man/recluster.region.Rd
+753f532b5a618b77d8ca454819ad18de *man/recluster.region.Rd
 8149737df8d7134d0a701c5346478244 *man/recluster.rotate.Rd
 4783dfc442e7d348137404a1c7b891db *man/recluster.test.dist.Rd
 615cbe53ad3b2d7f67b7459acf609c1d *man/treebut.Rd

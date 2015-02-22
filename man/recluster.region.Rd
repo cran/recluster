@@ -4,23 +4,23 @@
 A new clustering method based on continuous consensus.
 }
 \description{
-This function is specifically designed to allow regionalization analysis when occurrence of zero and tied values are particularly numerous. This often occurs when using turnover indices at small or mid-spatial scales where huge barriers do not occur. The function requires as input a matrix having areas in rows and species occurrence (1,0) in columns but it also allows for inclusion of a phylogenetic tree to compute phylogenetic beta-diversity. The indices to be used are those allowed by recluster.dist, but custom indices can be introduced (see recluster.dist). The function requests a custom number of trees (n=50 by default) and an interval of mincl-maxcl (by default 2-3)values to indicate the number of regions to be identified. Clustering methods implemented by hclust are allowed. The function produces n trees by randomly re-ordering the original row order. Then, the trees are cutted to different nodes (from the mincl-1th to the maxcl-1th node), thus producing an increasing number of clusters. Successively, the function compares clustering solutions among the same cuts in different re-sampled trees. This produces a dissimilarity matrix among cells represented by the times each pair of areas is located in different clusters over the different solutions extracted for different trees for the same cut. This dissimilarity is standardised by the number of re-sampled trees to produce values ranging from 0 (for pairs of cells always belonging to the same cluster) to 1 (pairs never belonging to the same cluster). A final hierarchical clustering is applied generating an interval of maxcl-mincl. Since the number of clusters requested by the user interval cannot precisely match the mean number of clusters obtained by the tree cuts, the clustering solution for each k value is obtained by selecting the dissimilarity matrix obtained from the nearest mean number of clustering solutions. 
+This function is specifically designed to allow regionalization analysis when occurrence of zero and tied values are particularly numerous. This often occurs when using turnover indices at small or mid-spatial scales where huge barriers do not occur. The function requires as input a matrix having areas in rows and species occurrence (1,0) in columns but it also allows for inclusion of a phylogenetic tree to compute phylogenetic beta-diversity. The indices to be used are those allowed by recluster.dist, but custom indices can be introduced (see recluster.dist). The function requests a custom number of trees (n=50 by default) and an interval of mincl-maxcl (by default 2-3)values to indicate the number of regions to be identified. Clustering methods implemented by hclust are allowed but also Partition Around Medoids and DIANA. The function produces n trees by randomly re-ordering the original row order. Then, the trees are cutted to different nodes (from the mincl-1th to the maxcl-1th node), thus producing an increasing number of clusters. Successively, the function compares clustering solutions among the same cuts in different re-sampled trees. This produces a dissimilarity matrix among cells represented by the times each pair of areas is located in different clusters over the different solutions extracted for different trees for the same cut. This dissimilarity is standardised by the number of re-sampled trees to produce values ranging from 0 (for pairs of cells always belonging to the same cluster) to 1 (pairs never belonging to the same cluster). A final hierarchical clustering is applied generating an interval of maxcl-mincl. Since the number of clusters requested by the user interval cannot precisely match the mean number of clusters obtained by the tree cuts, the clustering solution for each k value is obtained by selecting the dissimilarity matrix obtained from the nearest mean number of clustering solutions. 
 }
 \usage{
-recluster.region(mat,tr=10,dist="simpson",method="ward",phylo=NULL, mincl=2,maxcl=3,
+recluster.region(mat,tr=50,dist="simpson",method="ward",phylo=NULL, mincl=2,maxcl=3,
 rettree=FALSE,retmat=FALSE,retmemb=FALSE)}
 \arguments{
   \item{mat}{
-The community matrix used to construct the tree.
+A binary presence-absence community matrix or any dissimilarity matrix.
 }
     \item{tr}{
 The number of trees to be included in the consensus.
 }
    \item{dist}{
-One among the beta-diversity indexes allowed by recluster.dist or a custom binary dissimilarity specified according to the syntax of designdist function of the vegan package.
+One among the beta-diversity indexes allowed by recluster.dist or a custom binary dissimilarity specified according to the syntax of designdist function of the vegan package. Not required when the input is a dissimilarity matrix.
 }
    \item{method}{
-Any clustering method allowed by hclust.
+Any clustering method allowed by hclust but also "pam" and "diana".
 }
    \item{phylo}{
 An ultrametric and rooted phylogenetic tree for species having the same labels as in mat columns. Only required for phylogenetic beta-diversity indices.
@@ -71,7 +71,8 @@ Leonardo Dapporto
 }
 \examples{
 data(dataisl)
-turn_cl<-recluster.region(dataisl,tr=100,rettree=TRUE)
+simpson<-recluster.dist(dataisl)
+turn_cl<-recluster.region(simpson,tr=10,rettree=TRUE)
 #plot the three for three clusters
 plot(turn_cl$tree[[2]])
 #inspect cluster membership
