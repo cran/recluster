@@ -51,9 +51,6 @@ A colour plot.
 \references{
 Dapporto, L., Fattorini, S., Vod?, R., Dinc?, V., Vila, R. "Biogeography of western Mediterranean butterflies: combining turnover and nestedness components of faunal dissimilarity." 
 J Biogeogr (2014), 41: 1639-1650. 
-\url{
-www.unifi.it/scibio/bioinfo/recluster.html
-}
 }
 \author{
 Leonardo Dapporto and Matteo Ramazzotti
@@ -63,7 +60,7 @@ data(datamod)
 sordiss<- recluster.dist(datamod, dist="sorensen")
 lat<-c(2,2,2,1,3,1,1,3,3)
 long<-c(1,5,3,3,3,1,5,1,5)
-points<-metaMDS(sordiss, center=TRUE)$points
+points<-cmdscale(sordiss)
 col<-recluster.col(points)
 recluster.plot.sites.col(long, lat, col,text=TRUE)
 }

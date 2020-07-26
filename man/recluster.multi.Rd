@@ -1,10 +1,10 @@
 \name{recluster.multi}
 \alias{recluster.multi}
 \title{
-Multiscale bootstrap based on consensus trees
+Multiscale bootstrap based on a consensus tree
 }
 \description{
-Given an initial tree and a data matrix, this function computes bootstrap for nodes as done by recluster.boot. Several levels of bootstrap can be computed by varying the number of levels and the step in increasing proportions of species sampled from the original matrix.
+Given an initial tree and a data matrix, this function computes bootstrap for nodes as done by recluster.boot. Different levels of bootstrap can be computed by varying the proportions of species sampled from the original matrix.
 }
 \usage{
 recluster.multi(tree, mat, phylo = NULL, tr = 100, p = 0.5, 
@@ -43,18 +43,15 @@ The increase in ratio between the first level (x1) and the next ones.
 }
 }
 \details{
-Computation can be time consuming much more than for recluster.boot. It is suggested to assess the degree of row bias by recluster.hist and recluster.node.strength to optimize the number of required consensus trees before starting the analysis.
+Computation can be time consuming. It is suggested to assess the degree of row bias by recluster.hist and recluster.node.strength to optimize the number of consensus trees before starting the analysis.
 }
 \value{
-An object of the matrix format indicating percentage of bootstrap trees replicating each node for each level.
+A matrix indicating the percentage of bootstrap trees replicating each node for each level.
 }
 \references{
 Dapporto L., Ramazzotti M., Fattorini S., Talavera G., Vila R., Dennis R. 
 "recluster: an unbiased clustering procedure for beta-diversity turnover"
 Ecography (2013), 36:1070-1075.
-\url{
-www.unifi.it/scibio/bioinfo/recluster.html
-}
 }
 \author{
 Leonardo Dapporto and Matteo Ramazzotti

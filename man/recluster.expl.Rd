@@ -1,10 +1,10 @@
 \name{recluster.expl}
 \alias{recluster.expl}
 \title{
-Compute the dissimilarity contained in a distance matrix which is explained by a clustering solution of the elements.
+Computes the dissimilarity contained in a distance matrix which is explained by a clustering solution.
 }
 \description{
-This function compute the fraction of the distances contained in a dissimilarity matrix which is explained by a clustering solution of the elements. The value is obtained by computing the sum of all the dissimilarity values among elements belonging to different clusters and diving this sum for the sum of all the cells of the original dissimilarity matrix.
+This function computes the fraction of the distances contained in a dissimilarity matrix which is explained by a clustering solution of the elements. The value is obtained by computing the sum of all the dissimilarity values among elements belonging to different clusters and divided by the sum of all the cells of the original dissimilarity matrix.
 }
 \usage{
 recluster.expl(mat, clust)
@@ -24,9 +24,6 @@ A number ranging between 0 and 1 indicating the fraction of explained dissimilar
 Holt, B.G. et al 
 "An Update of Wallace's Zoogeographic Regions of the World."
 Science, 339:74-78.
-\url{
-www.unifi.it/scibio/bioinfo/recluster.html
-}
 }
 \author{
 Leonardo Dapporto

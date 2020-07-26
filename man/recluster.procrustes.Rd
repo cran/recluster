@@ -1,7 +1,7 @@
 \name{recluster.procrustes}
 \alias{recluster.procrustes}
 \title{
-Compute a procrustes analysis between two matrices even if only a subset of cases are in common.
+Computes a procrustes analysis between two matrices even if only a subset of cases are shared.
 }
 \description{
 This function computes a procrustes analysis (as done by the vegan procrustes function) but it also allows including a subset of cases shared between the two matrices and some unshared cases. The shared cases must be listed first and in the same order in the two matrices. Moreover, the number of shared cases must be indicated. The function applies a procrustes analysis by scaling, mirroring ad rotating the second matrix to minimizing its dissimilarity from the first on the basis of shared cases. Then, the same transformation is applied to the unshared cases of the second matrix. Finally, it allows including the matrices of coordinates for variables as obtained, for example, by PCA.

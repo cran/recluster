@@ -1,4 +1,4 @@
-recluster.region<-function(mat,tr=50,dist="simpson",method="ward",phylo=NULL, mincl=2,maxcl=3,rettree=FALSE,retmat=FALSE,retmemb=FALSE){
+recluster.region<-function(mat,tr=50,dist="simpson",method="ward.D2",phylo=NULL, mincl=2,maxcl=3,rettree=FALSE,retmat=FALSE,retmemb=FALSE){
         res<-NULL       
         clusters<-maxcl-mincl+1
         mat2<-as.matrix(mat)    

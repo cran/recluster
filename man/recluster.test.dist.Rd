@@ -53,9 +53,6 @@ The permutation test for variation maintained along the Y axis.
 Dapporto L., Voda R., Dinca V., Vila R.
 "Comparing population patterns for genetic and morphological markers with uneven sample sizes. An example for the butterfly Maniola jurtina"
 Methods Ecol Evol (2014), 5, 834-843.
-\url{
-www.unifi.it/scibio/bioinfo/recluster.html
-}
 }
 \author{
 Leonardo Dapporto

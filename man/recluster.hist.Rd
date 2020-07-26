@@ -1,10 +1,10 @@
 \name{recluster.hist}
 \alias{recluster.hist}
 \title{
-Histogram with tied and zero values
+Histogram of dissimilarity with tied and zero values
 }
 \description{
-This function creates a histogram where the number of cells with zero value are explicitely showed in the first bar. Moreover, it provides the percentage of cells having equal values in the matrix.
+This function creates a histogram with the values of a dissimilarity matrix where the number of cells with zero value are explicitely showed in the first bar. Moreover, it provides the percentage of cells having equal values in the matrix.
 }
 \usage{
 recluster.hist(x)
@@ -21,9 +21,6 @@ An histogram with supplementary information. The first bar only shows the zero v
 Dapporto L., Ramazzotti M., Fattorini S., Talavera G., Vila R., Dennis R. 
 "recluster: an unbiased clustering procedure for beta-diversity turnover"
 Ecography (2013), 36:1070-1075.
-\url{
-www.unifi.it/scibio/bioinfo/recluster.html
-}
 }
 \author{
 Leonardo Dapporto and Matteo Ramazzotti

@@ -25,9 +25,6 @@ An oject of the class phylo
 Dapporto L., Ramazzotti M., Fattorini S., Talavera G., Vila R., Dennis R. 
 "recluster: an unbiased clustering procedure for beta-diversity turnover"
 Ecography (2013), 36:1070-1075.
-\url{
-www.unifi.it/scibio/bioinfo/recluster.html
-}
 }
 \author{
 Leonardo Dapporto and Matteo Ramazzotti

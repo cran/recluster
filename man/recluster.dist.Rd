@@ -38,9 +38,6 @@ Global Ecol Biogeogr (2012), 21: 760-771.
 Leprieur F., Albouy C., De Bortoli J., Cowman P.F., Bellwood D.R., Mouillot D.  
 "Quantifying Phylogenetic Beta Diversity: Distinguishing between 'True' Turnover of Lineages and Phylogenetic Diversity Gradients."
 Plos One (2012), 7
-\url{
-www.unifi.it/scibio/bioinfo/recluster.html
-}
 }
 \author{
 Leonardo Dapporto and Matteo Ramazzotti

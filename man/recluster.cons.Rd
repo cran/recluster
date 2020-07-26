@@ -4,7 +4,7 @@
 Consensus tree among re-sampled trees 
 }
 \description{
-This function creates a series of trees by resampling the order of sites in the original dissimilarity matrix. Then, it computes a consensus among them. The resulting tree is unaffected by original row order.
+This function creates a series of trees by resampling the order of sites in the original dissimilarity matrix. Then, it computes a consensus among them. The resulting tree is independent of the original row order.
 }
 \usage{
 recluster.cons(mat, phylo = NULL, tr = 100, p = 0.5, 
@@ -30,10 +30,10 @@ A beta-diversity index (the Simpson index by default) included in recluster.dist
 Any clustering method allowed by hclust.
 }
    \item{blenghts}{
-A logical asking if non-negative least squares branch lengths should be computed.
+A logical indicating if non-negative least squares branch lengths should be computed.
 }
    \item{select}{
-A logical asking if only trees having higher than median fit in the least squares regression should be included in the consensus analysis.
+A logical indicating if only trees having a fit higher than the median value in the least squares regression should be included in the consensus analysis.
 }
 }
 \details{
@@ -54,9 +54,6 @@ The Residual Sum of Squares for the trees resulting if select=TRUE.
 Dapporto L., Ramazzotti M., Fattorini S., Talavera G., Vila R., Dennis R. 
 "recluster: an unbiased clustering procedure for beta-diversity turnover"
 Ecography (2013), 36:1070-1075.
-\url{
-www.unifi.it/scibio/bioinfo/recluster.html
-}
 }
 \author{
 Leonardo Dapporto and Matteo Ramazzotti

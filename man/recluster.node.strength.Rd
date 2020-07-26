@@ -37,7 +37,7 @@ Arguments to be passed to plot.phylo methods, see the ape package manual and \co
 }
 }
 \details{
-It has to be noted that values obtained by this function are not bootstrap supports for nodes but a crude indication of the magnitude of the row bias. Nodes with low value in this analysis can have strong bootstrap support and vice versa. This preliminary analysis can avoid that a strict consensus (100%) could collapse nodes potentially highly supported by bootstrap when the bias is high. When values is high it is reasonable to reduce the number of consensus trees thus fastening bootstrap analysis since the bias is low. 
+It has to be noted that values obtained by this function are not bootstrap supports for nodes but a crude indication of the magnitude of the row bias. Nodes with low value in this analysis can have strong bootstrap support and vice versa. This preliminary analysis can avoid that the use of a strict consensus (100%), when  the row bias is strong, collapse nodes potentially highly supported by bootstrap. Morever, when the bias is low, it is reasonable to reduce the number of consensus trees in successive analyses, thus fastening the bootstrap procedure. 
 }
 \value{
 A cluster with percentages of recurrence over different consensus runs for each node.
@@ -46,9 +46,6 @@ A cluster with percentages of recurrence over different consensus runs for each 
 Dapporto L., Ramazzotti M., Fattorini S., Talavera G., Vila R., Dennis R. 
 "recluster: an unbiased clustering procedure for beta-diversity turnover"
 Ecography (2013), 36:1070-1075.
-\url{
-www.unifi.it/scibio/bioinfo/recluster.html
-}
 }
 \author{
 Leonardo Dapporto and Matteo Ramazzotti

@@ -13,13 +13,10 @@ data(treemod)
 \details{
   A phylogenetic tree of 31 species taken from 9 sites.
 }
-\source{
-Dapporto L., Ramazzotti M., Fattorini S., Vila R., Talavera G., Dennis R. 
+\references{
+Dapporto L., Ramazzotti M., Fattorini S., Talavera G., Vila R., Dennis R. 
 "recluster: an unbiased clustering procedure for beta-diversity turnover"
-XXXX (2013), XXX:XXX.
-\url{
-www.unifi.it/scibio/bioinfo/recluster.html
-}
+Ecography (2013), 36:1070-1075.
 }
 \author{
 Gerard Talavera

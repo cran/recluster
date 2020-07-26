@@ -24,15 +24,12 @@ Logical, if TRUE then the axis with highest variance is oriented on the x-axis.
 A matrix with the first two columns representing the coordinates and the third, fourth and fifth representing the red, green and blue components, respectively. 	
 }
 \references{
-Kreft H., Jetz, W. 2010. 
+Kreft H., Jetz, W. 
 "A framework for delineating biogeographic regions based on species distributions" 
 J Biogeogr (2010),37: 2029-2053.
 
 Dapporto, L., Fattorini, S., Voda, R., Dinca, V., Vila, R. "Biogeography of western Mediterranean butterflies: combining turnover and nestedness components of faunal dissimilarity." 
 J Biogeogr (2014), 41: 1639-1650.
-\url{
-www.unifi.it/scibio/bioinfo/recluster.html
-}
 }
 \author{
 Leonardo Dapporto and Matteo Ramazzotti
@@ -40,7 +37,7 @@ Leonardo Dapporto and Matteo Ramazzotti
 \examples{
 data(datamod)
 sordiss<- recluster.dist(datamod,dist="sorensen")
-points<-metaMDS(sordiss, center=TRUE)$points
+points<-cmdscale(sordiss)
 col<-recluster.col(points)
 col
 }

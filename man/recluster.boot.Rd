@@ -4,7 +4,7 @@
 Bootstrap nodes of consensus trees
 }
 \description{
-Given an initial tree and a data matrix, this function computes bootstrap for nodes. Each tree used for bootstrap can be constructed by re-sampling the row order several times and by applying a consensus rule as done by recluster.cons. The number of sampled columns (species) can be varied.
+Given an initial tree and a data matrix, this function computes bootstrap for nodes. Each tree used for bootstrap is constructed by re-sampling the row order several times and by applying a consensus rule as done by recluster.cons. The number of sampled columns (species) can be varied.
 }
 \usage{
 recluster.boot(tree, mat, phylo = NULL, tr = 100, p = 0.5, 
@@ -18,7 +18,7 @@ A reference phylo tree for sites presumably constructed with recluster.cons func
 The matrix used to construct the tree.
 }
   \item{phylo}{
-An ultrametric and rooted tree for species phylogeny having the same labels as in mat columns. Only required for phylogenetic beta-diversity indices.
+An ultrametric and rooted tree for species phylogeny having the same labels of the mat columns. Only required for phylogenetic beta-diversity indices.
 }
   \item{tr}{
 The number of trees to be included in the consensus.
@@ -49,9 +49,6 @@ A vector indicating the percentage of bootstrap trees replicating each original 
 Dapporto L., Ramazzotti M., Fattorini S., Talavera G., Vila R., Dennis R. 
 "recluster: an unbiased clustering procedure for beta-diversity turnover"
 Ecography (2013), 36:1070-1075.
-\url{
-www.unifi.it/scibio/bioinfo/recluster.html
-}
 }
 \author{
 Leonardo Dapporto and Matteo Ramazzotti

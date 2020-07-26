@@ -3,38 +3,60 @@
 \alias{reCluster}
 \docType{package}
 \title{
-Ordination methods for the analysis of beta-diversity indices.
+Ordination methods for biodiversity patterns.
 }
 \description{
-Beta-diversity indices provide dissimilarity matrices with particular distribution of data requiring specific treatment. 
-For example the high frequency of ties and zero values in turnover indices produces hierarchical cluster dendrograms whose topology and bootstrap supports are affected by the order of rows in the original matrix. Moreover, biogeographical regionalization can be facilitated by a combination of hierarchical clustering and multi-dimensional scaling. The recluster package provides roboust techniques to analyze pattern of similarity in species composition.
+The analysis of different aspects of biodiversity requires specific algorithms. 
+For example, in regionalisation analyses, the high frequency of ties and zero values in 
+dissimilarity matrices produced by Beta-diversity turnover produces hierarchical 
+cluster dendrograms whose topology and bootstrap supports are affected by the order of 
+rows in the original matrix. Moreover, visualisation of biogeographical regionalisation 
+can be facilitated by a combination of hierarchical clustering and multi-dimensional 
+scaling. The recluster package provides robust techniques to visualise and analyse 
+pattern of biodiversity and to improve occurrence data for cryptic taxa. Other functions related to recluster (e.g. the biodecrypt family) are currently available in GitHub at https://github.com/leondap/recluster.
 }
 \details{
 \tabular{ll}{
 Package: \tab recluster\cr
 Type: \tab Package\cr
-Version: \tab 2.8\cr
-Date: \tab 2015-02-22\cr
+Version: \tab 2.9\cr
+Date: \tab 2020-07-25\cr
 License: \tab GPL (>= 2.0)\cr
 }
 }
 \author{
-Leonardo Dapporto, Matteo Ramazzotti, Simone Fattorini, Roger Vila, Gerard Talavera, Roger H.L. Dennis
-
+Leonardo Dapporto, Matteo Ramazzotti, Simone Fattorini, Roger Vila, Gerard Talavera, 
+Roger H.L. Dennis
 Maintainer: Leonardo Dapporto <leondap@gmail.com>
-
 }
 \references{
 Dapporto L., Ramazzotti M., Fattorini S., Talavera G., Vila R., Dennis R. 
 "recluster: an unbiased clustering procedure for beta-diversity turnover"
 Ecography (2013), 36:1070-1075.
+
+Dapporto, L., Fattorini, S., Voda, R., Dinca, V., Vila, R. "Biogeography of western 
+Mediterranean butterflies: combining turnover and nestedness components of faunal 
+dissimilarity." 
+J Biogeogr (2014), 41: 1639-1650.
+
+Dapporto L., Voda R., Dinca V., Vila R.
+"Comparing population patterns for genetic and morphological markers with uneven sample 
+sizes. An example for the butterfly Maniola jurtina"
+Methods Ecol Evol (2014), 5, 834-843.
+
+Platania L., Menchetti M. Dinca V., Corbella C., Kay-Lavelle I., Vila R., Wiemers M., 
+Schweiger O., Dapporto L. "Assigning occurrence data to cryptic taxa improves climatic 
+niche assessments: biodecrypt, a new tool tested on European butterflies". Glocal 
+Ecology and Biogeography (2020).
+
 \url{
-www.unifi.it/scibio/bioinfo/recluster.html
+https://github.com/leondap/recluster
 }
 }
 \keyword{ package }
 \examples{
 #load model data provided with the package 
+\dontrun{
 data(datamod)
 
 #explore zero and tied values in the data set
@@ -65,7 +87,7 @@ recluster.plot(tree,multiboot,low=1,high=2, direction="downwards")
 
 #project and plot a bi-dimensional plot in the RGB colour space
 sordiss<- recluster.dist(datamod,dist="sorensen")
-points<-metaMDS(sordiss, center=TRUE)$points
+points<-cmdscale(sordiss)
 col<-recluster.col(points)
 recluster.plot.col(col)
 
@@ -108,4 +130,5 @@ plot(ex2,col=c(1:5),pch=19,xlim=c(0,6),ylim=c(0,6),cex=2)
 procr1<-recluster.procrustes(ex1,ex2,num=4)
 plot(procr1$X,col=c(1:4),pch=19,xlim=c(-4,4),ylim=c(-4,4),cex=2)
 plot(procr1$Yrot,col=c(1:5),pch=19,xlim=c(-4,4),ylim=c(-4,4),cex=2)
+}
 }

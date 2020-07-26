@@ -3,7 +3,7 @@
 \title{
 Identifies a line in a configuration and computes its intercept and angular coefficient}
 \description{
-This function identifies a line in a configuration based on different criteria and produces its slope and intercept values. I can be used together with recluster.rotate used to rotate a configuration on the basis of a custom line.
+This function identifies a line in a configuration based on different criteria and produces its slope and intercept values. I can be used together with recluster.rotate to rotate a configuration based on a custom line.
 }
 \usage{
 recluster.line(mat,type="maxd",X1=NULL,X2=NULL)
